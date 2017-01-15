@@ -1,2 +1,103 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!doctype html>
+<html>
+	<head>
+		<titleBESt - BioEngineering Student Association</title>
+		<meta charset="UTF-8"/>
+		<meta name="description" content="BESt - BioEngineering Student Association - A Student Association at the University of Toronto">
+		<meta name="author" content="A. Ali">
+		<meta property="og:title" content="BESt - BioEngineering Student Association">
+		<meta property="og:description" content="BESt - BioEngineering Student Association - A Student Association at the University of Toronto">
+		<meta property="og:url" content="best.skule.ca">
+		<meta http-equiv="Cache-Control" content="public">
+		<meta http-equiv="Expires" content="Thu, 8 Jan 2015 16:00:00 GMT">
+		<meta http-equiv="Last-Modified" content="Fri, 31 Jan 2014 1:00:00 GMT">
+		<link rel="stylesheet" href="./css/index.css" type="text/css"/>
+		<link href="./css/image/favicon.ico" rel="icon" type="image/x-icon">
+		<meta http-equiv="Content-Type" content="image/svg+xml">
+		<script type = "text/javascript" src="./js/jquery-1.9.1.js"></script>
+		<script type = "text/javascript" src="./js/index.js"></script>
+	</head>
+	<body>
+		<div class="home">	
+			<div class="home_cover"></div>
+			<div class="nav">
+			<%= image_tag('logo_white.png') %>
+				<ul>
+					<li><a href = "index.php" style="color:#7d5b97">Home</a></li>
+					<li><a href = "about.php" style="color:#7d5b97">About us</a></li>
+					<li><a href = "events.php" style="color:#7d5b97">Events</a></li>
+					<li><a href = "exec.php" style="color:#7d5b97">Execs</a></li>
+					<li><a href = "#" style="color:#7d5b97">News</a></li>			
+				</ul>
+	
+			</div><!--nav-->
+			
+			<div class="home_body">
+				<p>Explore</p>
+				<p>Bioengineering</p>
+				<p>with BESt</p>
+				<div class="join" ><a href="https://goo.gl/forms/pRuNEa87JRIQ7ZSs2" style="color:white">JOIN US</a></div>
+			</div><!--home body-->
+		</div><!--home-->
+		<div class="about">
+			<div class="about_left">
+				<p>About us</p>
+				<p>Interested in how biology relates to engineering? You've come to the right place!
+				The BioEngineering Student Association (BESt) is a group of students passionate in bioengieering. Our primary goals
+				are to educate the student body about the various types of bioengineering, 
+				job opportunities available, and advancements in the field. Through hosting workshops and showcasing 
+				possible career paths via talks led by experts in the field, we aim to 
+				foster interest in bioengineering, expose students to industry and research 
+				leaders and facilitate their communication and interaction. </p>
+			</div>
+			<div class="right">
+				<p></p>
+			</div>
+		</div><!--about-->
+		
+		<div class="exec">
+			<%= image_tag('home_exec.png') %>
+			<a href="./exec.php"><div class="meet">Meet our team</div></a>
+		</div>
+		<div class="events">
+		<div class="box">
+			<div class="event_left">
+				<a href="events.php"><div class="ourEv">Our Events</div></a>
+				<div class="mentor">
+					<div class="mentor_cover">
+						<p>Mentorship</p>
+						<p>	Introduces you to graduate students in bioengineering. As a mentee, you will 
+						have opportunities to ask questions about specific areas of research and gain advice for career development.				
+						</p>
+						
+					</div>
+					<%= image_tag('mentor.png') %>
+				</div>
+				<div class="comp">
+					<div class="comp_cover">
+						<p>Bioengineering Competition</p>
+						<p> You will be given a real-life problem that you
+						can solve using your engineering design skills. You will be 
+						competing against other teams in groups of four. </p>
+						
+					</div>
+					<%= image_tag('competition.png') %>
+				</div>
+	
+			</div>
+			<div class="event_right">
+				<div class="prof_cover">
+						<p>Professor Talk</p>
+						<p>Gives you a chance to learn more about cutting-edge research. Aimed 
+						to stimulate interest in bioengineering, the talks are suitable for all
+						years and all disciplines to learn about biological applications in engineering. 
+						You will also get to network with the professors at these events. 
+						We plan to cover a wide range of research areas so come to the ones you are interested in!
+						</p>
+						
+						
+				</div>
+				<%= image_tag('prof.png') %>
+			</div>
+			</div>
+		</div><!--events-->

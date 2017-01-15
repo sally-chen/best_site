@@ -1,0 +1,97 @@
+
+.ab_line{
+	height:2px;
+	width:100px;
+	margin:0 auto;
+	background:#511f77
+}
+.ab_box{
+	width:1000px;
+	margin:50px auto 0px;
+}
+.who{
+	
+	
+	padding:160px auto 0px;
+	background:rgb(250,250,250);
+	text-align:center;
+	
+	height:600x;
+	
+	
+	
+	
+}
+
+.who p:nth-child(1){
+	color:#7d5b97;
+	font-size:30px;
+	font-family:"segoepr";
+	padding-top: 30px
+	
+}
+.who p:nth-child(3){
+	margin-top:20px;
+	color:rgb(50,50,50);
+	font-size:16px;
+	height:600x;
+	padding-bottom: 70px;
+	
+}
+.what{
+	
+	
+	background:rgba(125,91,151,0.3);
+	overflow:hidden;
+	text-align:center;
+	height:550px;
+	
+
+}
+
+.what p:nth-child(1){
+	color:#7d5b97;
+	font-size:30px;
+	font-family:"segoepr";
+	
+	
+}
+.what div:nth-child(3) img{
+	width:38%;
+	height:auto
+}
+.what div:nth-child(4){
+	margin-top:50px;
+	
+}
+.what div:nth-child(5) img{
+	width:45%;
+	height:auto
+}
+
+.what_div{
+margin-top:20px;
+	float:left;
+	width:300px;
+	text-align:center;
+	padding:0 15px;
+	
+}
+
+.what_div img{
+	margin:0 auto;
+	width:150px;
+	height:auto;
+	margin-bottom:20px
+}
+
+.what_div p:nth-child(2){
+	color:#7d5b97;
+	font-size:20px;
+	font-family:"segoepr";
+}
+.what_div p:nth-child(3){
+	color:rgb(50,50,50);
+	font-size:12px;
+	font-family:"segoepr";
+}

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BestSite</title>
+  <title>BESt-BioEngineering Student Association</title>
+  <% if @current_page != root_path %>
+  <%=render 'layouts/header' %>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +12,6 @@
 <body>
 
 <%= yield %>
-
+<%= render 'layouts/footer'%>
 </body>
 </html>

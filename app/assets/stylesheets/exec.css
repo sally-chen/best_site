@@ -1,0 +1,80 @@
+
+.title{
+	margin-top:80px;
+	margin-bottom:60px;
+	text-align:center;
+	font-size:35px;
+	font-family:"segoepr";
+	height:60px;
+	line-height:70px;
+	
+}
+.line{
+	height:2px;
+	width:100px;
+	margin:0 auto;
+	background:#511f77;
+	
+}
+.exec_body{
+	margin: 25px auto 50px;
+	overflow: hidden;
+	width:1060px;
+	
+	
+}
+
+
+.shadow{
+	background: rgba(120,88,144,0.8);
+	color: white;
+	text-align: center;
+	font-size:15px
+	
+}
+.shadow p{
+	margin: 25px 20px;
+}
+
+
+.exec_box{
+	margin:2px 2px;
+	float:left;
+	position: relative;
+	width:260px;
+	height:260px;
+	
+}
+
+.exec_box img{
+	height:100%;
+	width:100%;
+	
+}
+.exec_label{
+	position:absolute;
+	bottom:0;left:0;
+	
+	width:260px;
+	z-index:2;
+	height:100px;
+	background: linear-gradient(to bottom, rgba(20,20,20,0), rgba(20,20,20,1) );
+
+
+	color:white;
+	text-align:center;
+	overflow: hidden;
+}
+
+.exec_label .exec_p1{
+font-size:14px;
+	margin-top: 50px;
+	
+}
+
+.exec_label .exec_p2{
+font-size:13px;
+margin: 30px 10px;
+
+	
+}
