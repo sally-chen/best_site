@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
+   before_action :logged_in_admin, only: [:new, :create, :edit, :update, :destroy]
   def index
      @events = Event.all
   end
   
   def new
+    @submit_marker = "Add Event"
     @event = Event.new
   end
   
@@ -18,12 +20,16 @@ class EventsController < ApplicationController
   end
 
   def show
-   @event = Event.find(params[:id])
     
+   @event = Event.find(params[:id])
+   @ev_picture = @event.ev_pictures.build 
   end
 
   def edit
+    @submit_marker = "Update Event"
     @event = Event.find(params[:id])
+    @event.ev_pictures.build
+    
   end
   
   def update
@@ -43,6 +49,12 @@ class EventsController < ApplicationController
   private
   
   def event_params
-    params.require(:event).permit(:event_title, :event_content, :event_date, :picture)
+    params.require(:event).permit(:event_title, :event_content, :event_date, :picture, ev_pictures_attributes: [ :id, :picture, :_destroy])
+  end
+  
+  def logged_in_admin
+    unless logged_in?
+      redirect_to login_url
+    end
   end
 end

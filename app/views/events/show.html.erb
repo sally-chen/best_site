@@ -1,1 +1,26 @@
-<h1><%= @event.event_title%></h1>
+<div class="container_form">
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <h2><%= @event.event_title%></h2>
+  <h4>Event image uploader</h4>
+  <%= form_for @event do |f| %>
+     
+     
+     <%= f.fields_for :ev_pictures do |ev_picture| %>
+      <div class="ev_picture_fields">
+        <div class="field">
+        <%= ev_picture.label :picture %><br>
+        <%= ev_picture.file_field :picture,class: 'form-control' %>
+        <%= ev_picture.check_box :_destroy %>
+         <%= ev_picture.label :_destroy, 'remove' %>
+        </div>
+      </div>
+     <% end %>
+     <%= f.submit "add", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
+</div>
+
+ 

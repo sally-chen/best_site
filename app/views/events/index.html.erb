@@ -15,36 +15,48 @@
 				</div>
 				<div class="separ fleft"></div>
 				<div class="descr fleft ">
-					<p class="des_tit"><%= link_to event.event_title, event %></p>
+					<p class="des_tit"><%= event.event_title %></p>
 					<p><%= event.event_content %></p>
 					<div class="thumnail_frame">
-					  <%= link_to image_tag('agm.jpg', :class => "fleft "), image_path("agm.jpg"), data:{ lightbox: "agm", title: "11111"} %>
-					  <%= link_to image_tag('educate.png', :class => "fleft "), image_path("educate.png"), data:{ lightbox: "agm", title: "222"} %>
-					  <%= link_to image_tag('mentor.png', :class => "fleft "), image_path("mentor.png"), data:{ lightbox: "agm", title: "333"} %>
-					  <%= link_to image_tag('agm.jpg', :class => "fleft "), image_path("agm.jpg"), data:{ lightbox: "agm", title: "444"} %>
-					  <%= link_to image_tag('agm.jpg', :class => "fleft "), image_path("agm.jpg"), data:{ lightbox: "agm", title: "555"} %>
-					  <%= link_to image_tag('agm.jpg', :class => "fleft "), image_path("agm.jpg"), data:{ lightbox: "agm", title: "66"} %>
-						
-				
+<!-- images try out-------------------------->
+					  <% event.ev_pictures.each do |ev_picture|%>
+					  	
+					  	<% if ev_picture.picture? %>
+					  		<%= link_to image_tag(ev_picture.picture.url, :class => "fleft"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title} %>
+					  	<% end %>
+					  <% end %>
 					</div>
-					
+<!-- images try out-------------------------->					
 					
 					<% if logged_in? %>	
-						<p><%= link_to "Edit", edit_event_path(event) %> | <%= link_to "delete", event, method: :delete,
-						data: { confirm: "You sure?" } %></p>
+						<p><%= link_to "Edit", edit_event_path(event) %> |
+								<%= link_to "Add Images", event %> | 
+								<%= link_to "delete", event, method: :delete,
+										data: { confirm: "You sure?" } %></p>
 					<% end %>
 				</div>
 				<% end %>
 				
 				<% if i%2 == 0 %>
 					<div class="descr fleft talign_r" >
-						<p class="des_tit"><%= link_to event.event_title, event %></p>
+						<p class="des_tit"><%= event.event_title %></p>
 						<p><%= event.event_content %></p>
 					
 						<% if logged_in? %>	
-							<p><%= link_to "Edit", edit_event_path(event) %> | <%= link_to "delete", event, method: :delete,
-							data: { confirm: "You sure?" } %></p>
+							<p><%= link_to "Edit", edit_event_path(event) %> |
+								<%= link_to "Add Images", event %> | 
+								<%= link_to "delete", event, method: :delete,
+										data: { confirm: "You sure?" } %></p>
 						<% end %>
+						<div class="thumnail_frame">
+<!-- images try out-------------------------->
+						  <% event.ev_pictures.each do |ev_picture|%>
+						  	
+						  	<% if ev_picture.picture? %>
+						  		<%= link_to image_tag(ev_picture.picture.url, :class => "fright"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title} %>
+						  	<% end %>
+						  <% end %>
+						</div>
 					</div>
 					<div class="separ fleft"></div>
 					<div class="pic fleft">

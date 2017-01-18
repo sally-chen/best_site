@@ -29,4 +29,9 @@
 			</div>
 			
 	</div>
-	<div class="right">BioEngineering Student Association 2016 | Website Designed and Developed By C. Chen </div>
+	<div class="cr">BioEngineering Student Association 2016 | Website Designed and Developed By C. Chen
+	 <%unless logged_in? %>
+	 | <%= link_to "Log in", login_path %>
+	 <%end%>
+	</div>
+	

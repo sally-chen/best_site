@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ev_pictures/new'
+
   get 'events/new'
   get 'events/show'
   get 'events/edit'
@@ -11,8 +13,9 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   
-  resources :events
-
+  resources :events 
+  resources :ev_pictures
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

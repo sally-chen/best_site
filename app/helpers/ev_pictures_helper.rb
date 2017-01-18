@@ -1,0 +1,2 @@
+module EvPicturesHelper
+end
