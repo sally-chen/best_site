@@ -11,7 +11,7 @@
 				<% if i%2 == 1 %>
 				<div class="pic fleft">
 					<div class="date fright"><p><%= event.event_date %></p></div>
-					<%= image_tag(event.picture.url, :class => "fright") if event.picture? %>
+					<% -#= image_tag(event.picture.url, :class => "fright") if event.picture? -%>
 				</div>
 				<div class="separ fleft"></div>
 				<div class="descr fleft ">
@@ -19,12 +19,12 @@
 					<p><%= event.event_content %></p>
 					<div class="thumnail_frame">
 <!-- images try out-------------------------->
-					  <% event.ev_pictures.each do |ev_picture|%>
+					  <% -# event.ev_pictures.each do |ev_picture|-%>
 					  	
-					  	<% if ev_picture.picture? %>
-					  		<%= link_to image_tag(ev_picture.picture.url, :class => "fleft"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title} %>
-					  	<% end %>
-					  <% end %>
+					  	<% -# if ev_picture.picture? -%>
+					  		<% -#= link_to image_tag(ev_picture.picture.url, :class => "fleft"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title} -%>
+					  	<% -#end -%>
+					  <% -# end - %>
 					</div>
 <!-- images try out-------------------------->					
 					
@@ -50,12 +50,13 @@
 						<% end %>
 						<div class="thumnail_frame">
 <!-- images try out-------------------------->
-						  <% event.ev_pictures.each do |ev_picture|%>
+						  <% -#event.ev_pictures.each do |ev_picture|-%>
 						  	
-						  	<% if ev_picture.picture? %>
-						  		<%= link_to image_tag(ev_picture.picture.url, :class => "fright"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title} %>
-						  	<% end %>
-						  <% end %>
+						  	<% -#if ev_picture.picture? -%>
+						  		<%-#= link_to image_tag(ev_picture.picture.url, :class => "fright"), image_path(ev_picture.picture.url),data:{ lightbox: event.event_title, title: event.event_title}- %>
+						  	<% -#end -%>
+						  <% -#end -%>
+<!-- images try out-------------------------->
 						</div>
 					</div>
 					<div class="separ fleft"></div>
@@ -63,7 +64,7 @@
 						<div class="date fleft">
 							<p><%= event.event_date %></p>
 						</div>
-						<%= image_tag(event.picture.url, :class => "fleft") if event.picture? %>
+						<% -#= image_tag(event.picture.url, :class => "fleft") if event.picture?- %>
 					</div>
 				<% end %>
 			</div>

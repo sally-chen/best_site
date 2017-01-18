@@ -25,5 +25,6 @@ module BestSite
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.initialize_on_precompile = false
+    config.consider_all_requests_local = true
   end
 end
