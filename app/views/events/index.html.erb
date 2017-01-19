@@ -64,7 +64,7 @@
 						<div class="date fleft">
 							<p><%= event.event_date %></p>
 						</div>
-						<% = image_tag(event.picture.url, :class => "fleft") if event.picture? %>
+						<%= image_tag(event.picture.url, :class => "fleft") if event.picture? %>
 					</div>
 				<% end %>
 			</div>
