@@ -51,7 +51,7 @@ body{
 	width:50%;
 	float:right;
 	height:100px;
-	background-image: url("navibg.png");
+	background-image: image-url("navibg.png");
 	background-size:100% 100%;
 	background-repeat: no-repeat;
 }
@@ -73,7 +73,7 @@ body{
 	background: rgba(125,91,151,0.7);
 }*/
 .home{
-	background-image: url("homebg.png");
+	background-image: image-url("homebg.png");
 	background-size: 100% auto; 
 	background-repeat: no-repeat;
 	
@@ -258,7 +258,7 @@ position: relative;
 
 /*about*/
 .about{
-	background-image: url("aboutbg.png");
+	background-image: image-url("aboutbg.png");
 	background-size: 100% 100%; 
 	background-repeat: no-repeat;
 }
