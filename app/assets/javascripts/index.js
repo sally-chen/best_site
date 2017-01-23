@@ -43,7 +43,7 @@ $(function(){
 $(function(){
 	$(".nav ul li").hover(function(){
 
-		$(this).css({background:"rgba(125,91,151,0.7)",borderTop:"3px solid #511f77",height:"72px",lineHeight:"75px"});
+		$(this).css({background:"rgba(125,91,151,0.7)",borderTop:"3px solid #511f77",height:"75px",lineHeight:"75px"});
 		$(this).find("a").css("color","white");
 	},function(){
 		$(this).css({background:"none",border:"none",lineHeight:"80px"});
